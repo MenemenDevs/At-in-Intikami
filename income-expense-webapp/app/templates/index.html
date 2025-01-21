@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Income Expense Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1>Income Expense Calculator</h1>
+        </header>
+        <form method="post" class="bg-light p-4 rounded shadow-sm">
+            <div class="form-group">
+                <label for="language">Select Language:</label>
+                <select name="language" id="language" class="form-control">
+                    <option value="en">English</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="zh">中文</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="income_source">{{ translations['income_source'] }}</label>
+                <input type="text" id="income_source" name="income_source" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="income_amount">{{ translations['income_amount'] }}</label>
+                <input type="number" id="income_amount" name="income_amount" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="expense_source">{{ translations['expense_source'] }}</label>
+                <input type="text" id="expense_source" name="expense_source" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="expense_amount">{{ translations['expense_amount'] }}</label>
+                <input type="number" id="expense_amount" name="expense_amount" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">{{ translations['submit'] }}</button>
+        </form>
+        {% if income_source and income_amount and expense_source and expense_amount %}
+            <div class="mt-4">
+                <p class="alert alert-success">{{ translations['total_income'] }}: {{ income_amount }} ({{ income_source }})</p>
+                <p class="alert alert-danger">{{ translations['total_expense'] }}: {{ expense_amount }} ({{ expense_source }})</p>
+                <p class="alert alert-info">{{ translations['remaining_amount'] }}: {{ remaining_amount }}</p>
+            </div>
+        {% endif %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "income_source": "Gelir Kaynağı",
+    "income_amount": "Gelir Miktarı",
+    "expense_source": "Gider Kaynağı",
+    "expense_amount": "Gider Miktarı",
+    "submit": "Gönder",
+    "total_income": "Toplam Gelir",
+    "total_expense": "Toplam Gider"
+}

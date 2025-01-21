@@ -1,0 +1,9 @@
+{
+    "income_source": "Source de revenu",
+    "income_amount": "Montant du revenu",
+    "expense_source": "Source de dépense",
+    "expense_amount": "Montant de la dépense",
+    "submit": "Soumettre",
+    "total_income": "Revenu total",
+    "total_expense": "Dépense totale"
+}

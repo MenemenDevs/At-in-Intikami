@@ -1,0 +1,9 @@
+{
+    "income_source": "Income Source",
+    "income_amount": "Income Amount",
+    "expense_source": "Expense Source",
+    "expense_amount": "Expense Amount",
+    "submit": "Submit",
+    "total_income": "Total Income",
+    "total_expense": "Total Expense"
+}

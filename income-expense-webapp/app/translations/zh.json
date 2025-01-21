@@ -1,0 +1,9 @@
+{
+    "income_source": "收入来源",
+    "income_amount": "收入金额",
+    "expense_source": "支出来源",
+    "expense_amount": "支出金额",
+    "submit": "提交",
+    "total_income": "总收入",
+    "total_expense": "总支出"
+}
